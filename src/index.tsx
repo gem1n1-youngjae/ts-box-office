@@ -2,16 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { Global, css } from "@emotion/react";
-import emotionNormalize from "emotion-normalize";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Global
-      styles={css`
-        ${emotionNormalize}
-      `}
-    />
     <App />
   </React.StrictMode>,
   document.getElementById("root")
