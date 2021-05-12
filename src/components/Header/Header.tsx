@@ -1,4 +1,5 @@
 import React from "react";
+import { SetDate } from "..";
 import { TsMovieLogo } from "../../Assets/index";
 import * as S from "./Style";
 
@@ -11,6 +12,7 @@ const Header: React.FC = () => {
             <TsMovieLogo />
           </S.Logo_ts_movie>
         </S.Logo_default>
+        <SetDate></SetDate>
       </S.Group_flex>
     </S.Positioner>
   );

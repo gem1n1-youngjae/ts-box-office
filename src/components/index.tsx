@@ -1,3 +1,3 @@
 import Header from "./Header/Header";
-
-export { Header };
+import SetDate from "./SetDate/SetDate";
+export { Header, SetDate };

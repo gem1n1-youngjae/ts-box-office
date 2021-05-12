@@ -8,7 +8,7 @@ export const Positioner = styled.header`
 
 export const Group_flex = styled.div`
   position: relative;
-  width: 1130px;
+  width: 754px;
   height: 100%;
   margin: 0 auto;
   padding: 0 30px;
