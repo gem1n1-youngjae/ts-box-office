@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
 
 const GlobalStyle = css`
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
   html,
   body,
   div,
@@ -88,6 +89,7 @@ const GlobalStyle = css`
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    font-family: "Noto Sans KR", sans-serif;
   }
 
   article,
@@ -102,20 +104,24 @@ const GlobalStyle = css`
   nav,
   section {
     display: block;
+    font-family: "Noto Sans KR", sans-serif;
   }
 
   body {
     line-height: 1;
+    font-family: "Noto Sans KR", sans-serif;
   }
 
   ol,
   ul {
     list-style: none;
+    font-family: "Noto Sans KR", sans-serif;
   }
 
   blockquote,
   q {
     quotes: none;
+    font-family: "Noto Sans KR", sans-serif;
   }
 
   blockquote:before,
@@ -124,11 +130,13 @@ const GlobalStyle = css`
   q:after {
     content: "";
     content: none;
+    font-family: "Noto Sans KR", sans-serif;
   }
 
   table {
     border-collapse: collapse;
     border-spacing: 0;
+    font-family: "Noto Sans KR", sans-serif;
   }
 `;
 
