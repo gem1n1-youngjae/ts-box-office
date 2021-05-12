@@ -22,6 +22,6 @@ export const Logo_default = styled.div`
 `;
 
 export const Logo_ts_movie = styled.div`
-  width: 222px;
-  height: 52px;
+  width: 246px;
+  height: 63px;
 `;
