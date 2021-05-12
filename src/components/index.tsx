@@ -1,3 +1,5 @@
 import Header from "./Header/Header";
 import SetDate from "./SetDate/SetDate";
-export { Header, SetDate };
+import Movies from "./Movies/Movies";
+
+export { Header, SetDate, Movies };
