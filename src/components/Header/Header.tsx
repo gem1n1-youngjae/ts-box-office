@@ -3,7 +3,11 @@ import { SetDate } from "..";
 import { TsMovieLogo } from "../../Assets/index";
 import * as S from "./Style";
 
-const Header: React.FC = () => {
+interface Props {
+  setDate: Function;
+}
+
+const Header = (props: Props) => {
   return (
     <S.Positioner>
       <S.Group_flex>
@@ -12,7 +16,7 @@ const Header: React.FC = () => {
             <TsMovieLogo />
           </S.Logo_ts_movie>
         </S.Logo_default>
-        <SetDate></SetDate>
+        <SetDate setDate={props.setDate}></SetDate>
       </S.Group_flex>
     </S.Positioner>
   );

@@ -1,7 +1,11 @@
 import * as React from "react";
 import * as S from "./Style";
 
-const SetDate: React.FC = () => {
+interface Props {
+  setDate: Function;
+}
+
+const SetDate: React.FC = (props: Props) => {
   return (
     <S.SettingWindow>
       <input type="number" name="year" size={20} />
