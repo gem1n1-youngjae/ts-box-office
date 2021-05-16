@@ -5,24 +5,40 @@ import * as Movie from "../../Api/GetMovie";
 interface Props {}
 
 const SetDate: React.FC = (props: Props) => {
-  const [toDay, setToDay] = React.useState(Date.now());
+  const [toDay, setToDay] = React.useState(new Date());
   const [movieDate, setMvieDate] = React.useState({
-    year: 0,
-    month: 0,
-    day: 0,
+    year: toDay.getFullYear(),
+    month: toDay.getMonth() + 1,
+    day: toDay.getDate(),
   });
-  const onChange = (e: any) => {
+  const onChange = (e?: any) => {
     const { value, name } = e.target;
     setMvieDate({
-      ...movieDate, // 기존의 input 객체를 복사한 뒤
-      [name]: value, // name 키를 가진 값을 value 로 설정
+      ...movieDate,
+      [name]: value,
     });
+  };
+  const changeDate = () => {
+    const [inputYear, inputMonth, inputDate] = Object.values(movieDate);
+    setMvieDate({
+      year: inputYear,
+      month: inputMonth,
+      day: inputDate,
+    });
+    console.log(`movieDate`, movieDate);
+    Movie.GetMovieData(movieDate);
+  };
+  const handleKeyPress = (e: any) => {
+    if (e.key === "Enter") {
+      changeDate();
+    }
   };
   return (
     <S.SettingWindow>
       <input
         type="number"
         name="year"
+        onKeyPress={handleKeyPress}
         onChange={onChange}
         value={movieDate.year}
       />
@@ -30,6 +46,7 @@ const SetDate: React.FC = (props: Props) => {
       <input
         type="number"
         name="month"
+        onKeyPress={handleKeyPress}
         onChange={onChange}
         value={movieDate.month}
       />
@@ -37,6 +54,7 @@ const SetDate: React.FC = (props: Props) => {
       <input
         type="number"
         name="day"
+        onKeyPress={handleKeyPress}
         onChange={onChange}
         value={movieDate.day}
       />
