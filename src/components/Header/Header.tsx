@@ -3,9 +3,7 @@ import { SetDate } from "..";
 import { TsMovieLogo } from "../../Assets/index";
 import * as S from "./Style";
 
-interface Props {
-  setDate: Function;
-}
+interface Props {}
 
 const Header = (props: Props) => {
   return (
@@ -16,7 +14,7 @@ const Header = (props: Props) => {
             <TsMovieLogo />
           </S.Logo_ts_movie>
         </S.Logo_default>
-        <SetDate setDate={props.setDate}></SetDate>
+        <SetDate></SetDate>
       </S.Group_flex>
     </S.Positioner>
   );

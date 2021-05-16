@@ -23,10 +23,7 @@ export const SettingWindow = styled.div`
   input[name*="year"] {
     width: 160px;
   }
-  input[name*="month"] {
-    width: 110px;
-  }
-  input[name*="date"] {
+  input {
     width: 110px;
   }
 `;
